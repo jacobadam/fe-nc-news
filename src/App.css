@@ -2,12 +2,61 @@
   text-align: center;
 }
 
+Header {
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-image: url("http://webmadewell.com/wp-content/uploads/2018/01/img-bg-sample-parallax-header.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: sticky;
+  top: 0;
+}
+
+h1 {
+  position: relative;
+  padding: 10% 0 5%;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Montserrat",
+    sans-serif;
+}
+
+.articleHeader {
+    position: relative;
+    padding: 2% 0 5%;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    font-family: "Montserrat",
+    sans-serif;
+}
+
+.homepageHeader {
+   position: relative;
+   padding: 5% 0 5%;
+   max-width: 640px;
+   margin-left: auto;
+   margin-right: auto;
+   color: black;
+   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+   font-family: "Montserrat",
+   sans-serif;
+}
+
 .articlesList {
   border-style: solid;
-  border-width: 20px;
+  border-width: 10px;
 }
 
 .articleCard {
   border-style: solid;
+  border-width: 10px;
   border-color: slateblue
 }

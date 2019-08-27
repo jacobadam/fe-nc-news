@@ -20,7 +20,7 @@ class Articles extends Component {
     return (
       <main className="articlesContainer">
         <section className="articlesList">
-          <h1>Articles</h1>
+          <h2 className="articleHeader">Articles</h2>
           {articles.map(article => {
             return <ArticleCard article={article} key={article.article_id} />;
           })}

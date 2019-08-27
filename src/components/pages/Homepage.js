@@ -6,7 +6,7 @@ import Articles from './Articles';
 const Homepage = () => {
   return (
     <div>
-      <h1>WELCOME TO THE HOMEPAGE</h1>
+      <h2 className="homepageHeader">WELCOME TO THE HOMEPAGE</h2>
       <Articles/>
     </div>
   );

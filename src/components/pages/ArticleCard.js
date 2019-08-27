@@ -11,7 +11,6 @@ const ArticleCard = props => {
       <Link to={`/articles/${article_id}`}>
         <p>{title}</p>
       </Link>
-      {/* <p>{title}</p> */}
       <Link to={`/users/${author}`}>
         <p>{author}</p>
       </Link>

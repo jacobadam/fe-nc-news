@@ -28,3 +28,7 @@ export const getUser = username => {
     return user;
   });
 };
+
+export const getComments = () => {
+  return axios.get()
+}
