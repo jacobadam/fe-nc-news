@@ -1,8 +1,16 @@
 import React from "react";
 import { Link } from "@reach/router";
+import CommentCard from "./CommentCard";
 
 const ArticleCard = props => {
-  const { article_id, title, author, topic, votes } = props.article;
+  const {
+    article_id,
+    title,
+    author,
+    topic,
+    votes,
+    comment_count
+  } = props.article;
   return (
     <div className="articleCard">
       <Link to={`/topics/${topic}`}>
@@ -14,7 +22,11 @@ const ArticleCard = props => {
       <Link to={`/users/${author}`}>
         <p>{author}</p>
       </Link>
-      <p>{votes}</p>
+      <Link to={`/articles/${article_id}/comments`}>
+      <p>comments: {comment_count}</p>
+      </Link>
+      <p>votes: {votes}</p>
+      <CommentCard />
       {/* <button onClick={this.props.handleIncrement}>UpVote</button>
       <button onClick={this.props.handleDecrement}>DownVote</button> */}
     </div>

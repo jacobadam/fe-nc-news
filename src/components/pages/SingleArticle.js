@@ -14,14 +14,16 @@ class SingleArticle extends Component {
     if (isLoading) return <p>Loading...</p>;
     if (error) return <ErrorPage error={error} />;
 
-    const { title, body, votes, topic } = article;
+    const { title, body, votes, topic, comment_count, created_at } = article;
 
     return (
       <div>
         <h1>{title}</h1>
-        <p>{topic}</p>
+        <p>topic: {topic}</p>
         <p>{body}</p>
-        <p>{votes}</p>
+        <p>created: {created_at}</p>
+        <p>comments: {comment_count}</p>
+        <p>votes: {votes}</p>
       </div>
     );
   }

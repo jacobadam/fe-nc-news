@@ -3,11 +3,13 @@ import axios from "axios";
 const baseURL = "https://jacob-nc-news.herokuapp.com/api";
 
 export const getArticles = topic => {
-  return axios.get(`${baseURL}/articles`, {
-    params: { topic:topic}
-  }).then(({ data }) => {
-    return data.articles;
-  });
+  return axios
+    .get(`${baseURL}/articles`, {
+      params: { topic: topic }
+    })
+    .then(({ data }) => {
+      return data.articles;
+    });
 };
 
 export const getSingleArticle = article_id => {
@@ -29,6 +31,11 @@ export const getUser = username => {
   });
 };
 
-export const getComments = () => {
-  return axios.get()
-}
+export const getComments = article_id => {
+  return axios
+    .get(`${baseURL}/articles/${article_id}/comments`)
+    .then(({ data }) => {
+      const { comments } = data;
+      return comments;
+    });
+};

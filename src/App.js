@@ -7,6 +7,7 @@ import Articles from "./components/pages/Articles";
 import TopicPage from "./components/pages/TopicsPage";
 import Users from "./components/pages/Users";
 import SingleArticle from "./components/pages/SingleArticle";
+import CommentPage from "./components/pages/CommentPage"
 
 const App = () => {
   //user needs to be set in state
@@ -22,6 +23,7 @@ const App = () => {
         <TopicPage path="/topics" />
         <SingleArticle path="/articles/:article_id" />
         <Users path="/users/:username" />
+        <CommentPage path="/articles/:article_id/comments"/>
       </Router>
     </div>
   );
