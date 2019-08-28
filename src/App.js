@@ -19,13 +19,16 @@ class App extends Component {
       <div className="App">
         <Header username={username} />
         <Router>
-          <Homepage path="/" />
-          <Articles path="/articles" />
+          <Homepage username={username} path="/" />
+          <Articles username={username} path="/articles" />
           <Articles path="/topics/:topic" />
           <TopicPage path="/topics" />
-          <SingleArticle path="/articles/:article_id" />
+          <SingleArticle username={username} path="/articles/:article_id" />
           <Users path="/users/:username" />
-          <CommentPage path="/articles/:article_id/comments" />
+          <CommentPage
+            username={username}
+            path="/articles/:article_id/comments"
+          />
         </Router>
       </div>
     );

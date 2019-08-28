@@ -22,7 +22,13 @@ class Articles extends Component {
         <section className="articlesList">
           <h2 className="articleHeader">Articles</h2>
           {articles.map(article => {
-            return <ArticleCard article={article} key={article.article_id} />;
+            return (
+              <ArticleCard
+                article={article}
+                username={this.props.username}
+                key={article.article_id}
+              />
+            );
           })}
         </section>
         <Router className="articleInfo">

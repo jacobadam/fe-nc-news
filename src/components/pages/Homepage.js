@@ -1,6 +1,4 @@
 import React from "react";
-// import { Router } from '@reach/router';
-// import Header from './Header';
 import Articles from "./ArticlesComponents/Articles";
 
 const Homepage = () => {

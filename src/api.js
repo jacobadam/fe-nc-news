@@ -47,3 +47,17 @@ export const patchVotes = (voteDifference, article_id) => {
     inc_votes: voteDifference
   });
 };
+
+export const postComment = (username, body, article_id) => {
+  console.log(username, body, article_id, "API Log");
+  return axios.post(`${baseURL}/articles/${article_id}/comments`, {
+    username: username,
+    body: body
+  });
+};
+
+export const deleteComment = (username, article_id) => {
+         return axios.delete(
+           `${baseURL}/articles/${article_id}/comments`
+         );
+       };

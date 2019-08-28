@@ -3,6 +3,7 @@ import * as api from "../../../api"
 import ErrorPage from "../ErrorPage"
 import { Link } from "@reach/router";
 import VotesUpdater from "../VotesUpdater"
+import CommentPoster from "../../CommentPoster";
 
 class SingleArticle extends Component {
   state = {
@@ -32,6 +33,7 @@ class SingleArticle extends Component {
         <Link to={`/articles/${article_id}/comments`}>
           <p>comments: {comment_count}</p>
         </Link>
+        <CommentPoster username={this.props.username} article_id={article_id} />
         <VotesUpdater votes={votes} article_id={article_id} />
       </div>
     );
