@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 // import { Router } from '@reach/router';
 // import Header from './Header';
-import Articles from "./ArticlesComponents/Articles"
+import Articles from "./ArticlesComponents/Articles";
 
 const Homepage = () => {
   return (
     <div>
-      <h2 className="homepageHeader">WELCOME TO THE HOMEPAGE</h2>
-      <Articles/>
+      <h3 className="homepageHeader">WELCOME TO THE HOMEPAGE</h3>
+      <Articles />
     </div>
   );
 };
