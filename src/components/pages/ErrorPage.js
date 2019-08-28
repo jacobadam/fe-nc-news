@@ -3,7 +3,9 @@ import React from "react";
 const ErrorPage = ({ error }) => {
   return (
     <>
-      <h1>ERROR SUCKA</h1>
+      <h2>
+        {error.status} {error.msg}
+      </h2>
     </>
   );
 };

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import * as api from "../../api";
-import ErrorPage from "./ErrorPage";
+import * as api from "../../../api"
+import ErrorPage from "../ErrorPage"
+import { Link } from "@reach/router";
+import VotesUpdater from "../VotesUpdater"
 
 class SingleArticle extends Component {
   state = {
@@ -14,16 +16,23 @@ class SingleArticle extends Component {
     if (isLoading) return <p>Loading...</p>;
     if (error) return <ErrorPage error={error} />;
 
-    const { title, body, votes, topic, comment_count, created_at } = article;
+    const { title, body, votes, topic, comment_count, created_at, author, article_id } = article;
 
     return (
       <div>
+        <Link to={`/topics/${topic}`}>
+          <p>{topic}</p>
+        </Link>
         <h1>{title}</h1>
-        <p>topic: {topic}</p>
+        <Link to={`/users/${author}`}>
+          <p>{author}</p>
+        </Link>
         <p>{body}</p>
-        <p>created: {created_at}</p>
-        <p>comments: {comment_count}</p>
-        <p>votes: {votes}</p>
+        <p>Created: {new Date(created_at).toLocaleString()}</p>
+        <Link to={`/articles/${article_id}/comments`}>
+          <p>comments: {comment_count}</p>
+        </Link>
+        <VotesUpdater votes={votes} article_id={article_id} />
       </div>
     );
   }

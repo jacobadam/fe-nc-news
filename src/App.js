@@ -3,15 +3,13 @@ import "./App.css";
 import { Router } from "@reach/router";
 import Homepage from "./components/pages/Homepage";
 import Header from "./components/pages/Header";
-import Articles from "./components/pages/Articles";
-import TopicPage from "./components/pages/TopicsPage";
-import Users from "./components/pages/Users";
-import SingleArticle from "./components/pages/SingleArticle";
-import CommentPage from "./components/pages/CommentPage"
+import Articles from "./components/pages/ArticlesComponents/Articles";
+import TopicPage from "./components/pages/TopicsComponents/TopicsPage";
+import Users from "./components/pages/UsersComponents/Users";
+import SingleArticle from "./components/pages/ArticlesComponents/SingleArticle"
+import CommentPage from "./components/pages/CommentsComponents/CommentPage"
 
 const App = () => {
-  //user needs to be set in state
-
   
   return (
     <div className="App">

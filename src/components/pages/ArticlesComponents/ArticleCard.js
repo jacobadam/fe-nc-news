@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "@reach/router";
-import CommentCard from "./CommentCard";
+import VotesUpdater from "../VotesUpdater"
 
 const ArticleCard = props => {
   const {
@@ -9,7 +9,8 @@ const ArticleCard = props => {
     author,
     topic,
     votes,
-    comment_count
+    comment_count,
+    created_at
   } = props.article;
   return (
     <div className="articleCard">
@@ -22,22 +23,13 @@ const ArticleCard = props => {
       <Link to={`/users/${author}`}>
         <p>{author}</p>
       </Link>
+      <p>Created: {new Date(created_at).toLocaleString()}</p>
       <Link to={`/articles/${article_id}/comments`}>
-      <p>comments: {comment_count}</p>
+        <p>comments: {comment_count}</p>
       </Link>
-      <p>votes: {votes}</p>
-      <CommentCard />
-      {/* <button onClick={this.props.handleIncrement}>UpVote</button>
-      <button onClick={this.props.handleDecrement}>DownVote</button> */}
+      <VotesUpdater votes={votes} article_id={article_id} />
     </div>
   );
-
 };
-
-  //  this.handleIncrement() {
-  //   // console.log();
-  // }
-
-  // this.handleDecrement() {}
 
 export default ArticleCard;

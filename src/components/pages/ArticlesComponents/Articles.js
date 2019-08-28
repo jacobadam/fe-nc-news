@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import * as api from "../../api";
-import ArticleCard from "./ArticleCard";
+import * as api from "../../../api";
+import ArticleCard from "./ArticleCard"
 import { Router } from "@reach/router";
-import SingleArticle from "./SingleArticle";
+import SingleArticle from "./SingleArticle"
 
 class Articles extends Component {
   state = {
