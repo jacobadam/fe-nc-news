@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import * as api from "../../../api"
-import ErrorPage from "../FunctionalComponents/ErrorPage"
+import * as api from "../../../api";
+import ErrorPage from "../FunctionalComponents/ErrorPage";
 import { Link } from "@reach/router";
-import VotesUpdater from "../FunctionalComponents/VotesUpdater"
+import VotesUpdater from "../FunctionalComponents/VotesUpdater";
 import CommentPage from "../CommentsComponents/CommentPage";
-// import CommentCard from "../CommentsComponents/CommentCard";
+import LoadingPage from "../FunctionalComponents/LoadingPage";
 
 class SingleArticle extends Component {
   state = {
@@ -15,10 +15,19 @@ class SingleArticle extends Component {
 
   render() {
     const { isLoading, article, error } = this.state;
-    if (isLoading) return <p>Loading...</p>;
+    if (isLoading) return <LoadingPage/>
     if (error) return <ErrorPage error={error} />;
 
-    const { title, body, votes, topic, comment_count, created_at, author, article_id } = article;
+    const {
+      title,
+      body,
+      votes,
+      topic,
+      comment_count,
+      created_at,
+      author,
+      article_id
+    } = article;
 
     return (
       <div>
@@ -31,7 +40,12 @@ class SingleArticle extends Component {
         </Link>
         <p>{body}</p>
         <p>Created: {new Date(created_at).toLocaleString()}</p>
-        <VotesUpdater votes={votes} article_id={article_id} />
+        <VotesUpdater
+          username={this.props.username}
+          votes={votes}
+          author={author}
+          article_id={article_id}
+        />
         <br />
         <Link to={`/articles/${article_id}/comments`}>
           <p>comments: {comment_count}</p>

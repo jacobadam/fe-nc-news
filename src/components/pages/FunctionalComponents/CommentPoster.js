@@ -8,13 +8,14 @@ class CommentPoster extends Component {
   };
 
   render() {
+    const { username, author } = this.props;
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
           Comment:
           <input type="text" name="body" onChange={this.handleChange} />
         </label>
-        <button>add comment!</button>
+        {author === username && <button>add comment!</button>}
       </form>
     );
   }
@@ -32,9 +33,15 @@ class CommentPoster extends Component {
   addComment = () => {
     const { article_id, username } = this.props;
     const { body } = this.state;
-    api.postComment(username, body, article_id).then(comment => {
-      console.log(comment);
-    });
+    api
+      .postComment(username, body, article_id)
+      .then(comment => {
+        console.log(comment);
+        this.addComment(comment);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   };
 }
 

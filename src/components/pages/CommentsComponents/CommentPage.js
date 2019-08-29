@@ -21,6 +21,7 @@ class CommentPage extends Component {
       <main className="commentsContainer">
         <section className="commentsList">
           <CommentPoster
+            addNewComment={this.addNewComment}
             username={this.props.username}
             article_id={article_id}
           />
@@ -51,9 +52,13 @@ class CommentPage extends Component {
     });
   }
 
-  addComment = comment => {
-    console.log(comment, "sdads");
-    this.setState();
+  addNewComment = comment => {
+    this.setState(comments => {
+      console.log(comments)
+      return {
+        comments: [...comments, comment]
+      };
+    });
     // set state [comment, ...comments]
     //pass down to CommentPoster and invoke in correct place
   };

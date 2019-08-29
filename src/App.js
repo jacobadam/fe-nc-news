@@ -12,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 class App extends Component {
   state = {
-    username: "jessjelly"
+    username: ""
   };
   render() {
     const { username } = this.state;

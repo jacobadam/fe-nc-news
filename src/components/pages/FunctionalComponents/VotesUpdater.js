@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import * as api from "../../../api"
+import * as api from "../../../api";
 import ErrorPage from "./ErrorPage";
 
 class VotesUpdater extends Component {
@@ -9,23 +9,27 @@ class VotesUpdater extends Component {
   };
 
   render() {
-    const { votes } = this.props;
+    const { votes, username, author } = this.props;
     const { newVoteCount, error } = this.state;
     return (
       <>
-          <p>Votes: {votes + newVoteCount}</p>
-        <button
-          onClick={() => this.updateVotes(1)}
-          disabled={newVoteCount === 1}
-        >
-          Upvote
-        </button>
-        <button
-          onClick={() => this.updateVotes(-1)}
-          disabled={newVoteCount === -1}
+        <p>Votes: {votes + newVoteCount}</p>
+        {author === username && (
+          <button
+            onClick={() => this.updateVotes(1)}
+            disabled={newVoteCount === 1}
           >
-          Downvote
-        </button>
+            Upvote
+          </button>
+        )}
+        {author === username && (
+          <button
+            onClick={() => this.updateVotes(-1)}
+            disabled={newVoteCount === -1}
+          >
+            Downvote
+          </button>
+        )}
         {error && <ErrorPage error={error} />}
       </>
     );
