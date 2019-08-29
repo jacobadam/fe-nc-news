@@ -1,11 +1,19 @@
-import React from 'react';
+import React from "react";
 import { Link } from "@reach/router";
-import VotesUpdater from "../FunctionalComponents/VotesUpdater"
-import CommentPoster from "../FunctionalComponents/CommentPoster";
+import VotesUpdater from "../FunctionalComponents/VotesUpdater";
+// import CommentPoster from '../FunctionalComponents/CommentPoster';
 
 const CommentCard = props => {
-  //comment_id
-  const { article_id, author, votes, created_at, body } = props
+  const {
+    article_id,
+    author,
+    votes,
+    created_at,
+    body,
+    comment_id,
+    removeComment,
+    username
+  } = props;
   return (
     <div className="commentCard" key={article_id}>
       <Link to={`/users/${author}`}>
@@ -13,8 +21,12 @@ const CommentCard = props => {
       </Link>
       <h2>Created: {new Date(created_at).toLocaleString()}</h2>
       <h2>{body}</h2>
-      <CommentPoster username={props.username} article_id={article_id} />
       <VotesUpdater votes={votes} article_id={article_id} />
+      {author === username && (
+        <button type="submit" onClick={() => removeComment(comment_id)}>
+          Delete Comment!
+        </button>
+      )}
     </div>
   );
 };

@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "@reach/router";
 import VotesUpdater from "../FunctionalComponents/VotesUpdater"
-import CommentPoster from "../FunctionalComponents/CommentPoster"
 
 const ArticleCard = props => {
   const {
@@ -28,7 +27,6 @@ const ArticleCard = props => {
       <Link to={`/articles/${article_id}/comments`}>
         <p>comments: {comment_count}</p>
       </Link>
-      <CommentPoster username={props.username} article_id={article_id} />
       <VotesUpdater votes={votes} article_id={article_id} />
     </div>
   );

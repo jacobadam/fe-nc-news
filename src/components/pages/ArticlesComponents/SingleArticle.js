@@ -3,7 +3,8 @@ import * as api from "../../../api"
 import ErrorPage from "../FunctionalComponents/ErrorPage"
 import { Link } from "@reach/router";
 import VotesUpdater from "../FunctionalComponents/VotesUpdater"
-import CommentPoster from "../FunctionalComponents/CommentPoster"
+import CommentPage from "../CommentsComponents/CommentPage";
+// import CommentCard from "../CommentsComponents/CommentCard";
 
 class SingleArticle extends Component {
   state = {
@@ -30,11 +31,16 @@ class SingleArticle extends Component {
         </Link>
         <p>{body}</p>
         <p>Created: {new Date(created_at).toLocaleString()}</p>
+        <VotesUpdater votes={votes} article_id={article_id} />
+        <br />
         <Link to={`/articles/${article_id}/comments`}>
           <p>comments: {comment_count}</p>
         </Link>
-        <CommentPoster username={this.props.username} article_id={article_id} />
-        <VotesUpdater votes={votes} article_id={article_id} />
+        <CommentPage
+          username={this.props.username}
+          article_id={article_id}
+          author={author}
+        />
       </div>
     );
   }

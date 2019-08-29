@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import * as api from "../../../api";
-import CommentCard from './CommentCard'
-
+import CommentCard from "./CommentCard";
+import CommentPoster from "../FunctionalComponents/CommentPoster";
+// import { navigate } from "@reach/router";
 
 class CommentPage extends Component {
   state = {
@@ -12,15 +13,27 @@ class CommentPage extends Component {
 
   render() {
     const { isLoading, comments, error } = this.state;
-
+    const { article_id } = this.props;
     if (isLoading) return <p>Loading...</p>;
     if (error) return <p>Error!!!</p>;
 
     return (
       <main className="commentsContainer">
         <section className="commentsList">
+          <CommentPoster
+            username={this.props.username}
+            article_id={article_id}
+          />
           {comments.map(comment => {
-            return <CommentCard {...comment} key={comment.comment_id} />;
+            return (
+              <CommentCard
+                addComment={this.addComment}
+                removeComment={this.removeComment}
+                username={this.props.username}
+                {...comment}
+                key={comment.comment_id}
+              />
+            );
           })}
         </section>
       </main>
@@ -38,13 +51,15 @@ class CommentPage extends Component {
     });
   }
 
-  addComment = () => {
-    const { article_id, username } = this.props;
-    const { body } = this.state;
-    api.postComment(username, body, article_id).then(comment => {
-      console.log(comment.data.comment.body, "comment PAGE console");
-      this.setState(comment.data.comment.body, "");
-    });
+  addComment = comment => {
+    console.log(comment, "sdads");
+    this.setState();
+    // set state [comment, ...comments]
+    //pass down to CommentPoster and invoke in correct place
+  };
+
+  removeComment = comment_id => {
+    api.deleteComment(comment_id);
   };
 }
 

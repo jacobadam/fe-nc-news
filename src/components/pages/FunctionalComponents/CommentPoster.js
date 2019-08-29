@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import * as api from "../../../api"
+import * as api from "../../../api";
 
 class CommentPoster extends Component {
   state = {
@@ -26,7 +26,6 @@ class CommentPoster extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    console.log("submitting!");
     this.addComment();
   };
 
@@ -34,8 +33,7 @@ class CommentPoster extends Component {
     const { article_id, username } = this.props;
     const { body } = this.state;
     api.postComment(username, body, article_id).then(comment => {
-      console.log(comment.data.comment.body, 'comment console')
-      // this.setState(comment.data.comment.body, "");
+      console.log(comment);
     });
   };
 }
