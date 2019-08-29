@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import * as api from "../../../api";
-import ArticleCard from "./ArticleCard"
+import ArticleCard from "./ArticleCard";
 import { Router } from "@reach/router";
-import SingleArticle from "./SingleArticle"
+import SingleArticle from "./SingleArticle";
+import Sorter from "../FunctionalComponents/Sorter";
 
 class Articles extends Component {
   state = {
@@ -19,6 +20,7 @@ class Articles extends Component {
 
     return (
       <main className="articlesContainer">
+        <Sorter fetchAllArticles={this.fetchAllArticles} />
         <section className="articlesList">
           <h2 className="articleHeader">Articles</h2>
           {articles.map(article => {
@@ -48,13 +50,12 @@ class Articles extends Component {
     }
   }
 
-  fetchAllArticles() {
+  fetchAllArticles = (sort_by, order) => {
     const { topic } = this.props;
-    api.getArticles(topic).then(articles => {
+    api.getArticles({ topic, sort_by, order }).then(articles => {
       this.setState({ articles, isLoading: false });
     });
-  }
-
+  };
 }
 
 export default Articles;

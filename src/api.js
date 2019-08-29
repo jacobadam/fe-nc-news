@@ -2,12 +2,10 @@ import axios from "axios";
 
 const baseURL = "https://jacob-nc-news.herokuapp.com/api";
 
-export const getArticles = topic => {
-  // const queryParams = { topic, sort_by }
-  // console.log(queryParams)
+export const getArticles = ({ topic, sort_by, order }) => {
   return axios
     .get(`${baseURL}/articles`, {
-      params: { topic: topic }
+      params: { topic, sort_by, order }
     })
     .then(({ data }) => {
       return data.articles;
@@ -57,7 +55,5 @@ export const postComment = (username, body, article_id) => {
 };
 
 export const deleteComment = (username, article_id) => {
-         return axios.delete(
-           `${baseURL}/articles/${article_id}/comments`
-         );
-       };
+  return axios.delete(`${baseURL}/articles/${article_id}/comments`);
+};

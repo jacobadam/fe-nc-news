@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "@reach/router";
-import VotesUpdater from "../VotesUpdater";
+import VotesUpdater from "../FunctionalComponents/VotesUpdater"
+import CommentPoster from "../FunctionalComponents/CommentPoster";
 
 const CommentCard = props => {
   //comment_id
@@ -12,6 +13,7 @@ const CommentCard = props => {
       </Link>
       <h2>Created: {new Date(created_at).toLocaleString()}</h2>
       <h2>{body}</h2>
+      <CommentPoster username={props.username} article_id={article_id} />
       <VotesUpdater votes={votes} article_id={article_id} />
     </div>
   );

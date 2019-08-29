@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import * as api from "../../../api";
 import UsernameCard from "./UsernameCard";
-// import { Link } from "@reach/router";
 
 class Users extends Component {
   state = {

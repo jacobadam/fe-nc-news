@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import "./App.css";
 import { Router } from "@reach/router";
 import Homepage from "./components/pages/Homepage";
-import Header from "./components/pages/Header";
+import Header from "./components/pages/FunctionalComponents/Header";
 import Articles from "./components/pages/ArticlesComponents/Articles";
 import TopicPage from "./components/pages/TopicsComponents/TopicsPage";
 import Users from "./components/pages/UsersComponents/Users";
 import SingleArticle from "./components/pages/ArticlesComponents/SingleArticle";
 import CommentPage from "./components/pages/CommentsComponents/CommentPage";
+import 'bootstrap/dist/css/bootstrap.css'
 
 class App extends Component {
   state = {
@@ -33,5 +34,9 @@ class App extends Component {
       </div>
     );
   }
+  handleUserChange = e => {
+    const { value } = e.target;
+    this.setState({ username: value });
+  };
 }
 export default App;

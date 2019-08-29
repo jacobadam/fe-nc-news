@@ -32,11 +32,20 @@ class CommentPage extends Component {
   }
 
   fetchAllComments() {
-    const {article_id} = this.props
+    const { article_id } = this.props;
     api.getComments(article_id).then(comments => {
       this.setState({ comments, isLoading: false });
     });
   }
+
+  addComment = () => {
+    const { article_id, username } = this.props;
+    const { body } = this.state;
+    api.postComment(username, body, article_id).then(comment => {
+      console.log(comment.data.comment.body, "comment PAGE console");
+      this.setState(comment.data.comment.body, "");
+    });
+  };
 }
 
 export default CommentPage;

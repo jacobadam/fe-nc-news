@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import * as api from "../../../api"
-import ErrorPage from "../ErrorPage"
+import ErrorPage from "../FunctionalComponents/ErrorPage"
 import { Link } from "@reach/router";
-import VotesUpdater from "../VotesUpdater"
-import CommentPoster from "../../CommentPoster";
+import VotesUpdater from "../FunctionalComponents/VotesUpdater"
+import CommentPoster from "../FunctionalComponents/CommentPoster"
 
 class SingleArticle extends Component {
   state = {
