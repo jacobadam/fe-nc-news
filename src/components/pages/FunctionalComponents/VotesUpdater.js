@@ -9,12 +9,12 @@ class VotesUpdater extends Component {
   };
 
   render() {
-    const { votes, username, author } = this.props;
+    const { votes, username } = this.props;
     const { newVoteCount, error } = this.state;
     return (
       <>
         <p>Votes: {votes + newVoteCount}</p>
-        {author === username && (
+        {username && (
           <button
             onClick={() => this.updateVotes(1)}
             disabled={newVoteCount === 1}
@@ -22,7 +22,7 @@ class VotesUpdater extends Component {
             Upvote
           </button>
         )}
-        {author === username && (
+        {username && (
           <button
             onClick={() => this.updateVotes(-1)}
             disabled={newVoteCount === -1}

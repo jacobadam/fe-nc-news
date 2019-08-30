@@ -13,14 +13,14 @@ import "bootstrap/dist/css/bootstrap.css";
 
 class App extends Component {
   state = {
-    username: 'jessjelly'
+    username: "jessjelly"
   };
   render() {
     const { username } = this.state;
     return (
       <div className="App">
         <Header username={username} />
-        <Router>
+        <Router primary={false}>
           <Homepage username={username} path="/" />
           <Articles username={username} path="/articles" />
           <Articles path="/topics/:topic" />

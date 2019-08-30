@@ -66,10 +66,10 @@ class CommentPage extends Component {
   }
 
   addNewComment = comment => {
-    this.setState(comments => {
-      console.log(comments);
+    this.setState(prevState => {
+      console.log(prevState, "<<prev state");
       return {
-        comments: [...comments, comment]
+        comments: [comment,...prevState.comments]
       };
     });
     // set state [comment, ...comments]
