@@ -4,6 +4,8 @@ import ArticleCard from "./ArticleCard";
 import { Router } from "@reach/router";
 import SingleArticle from "./SingleArticle";
 import Sorter from "../FunctionalComponents/Sorter";
+import LoadingPage from "../FunctionalComponents/LoadingPage";
+import ErrorPage from "../FunctionalComponents/ErrorPage";
 
 class Articles extends Component {
   state = {
@@ -15,8 +17,8 @@ class Articles extends Component {
   render() {
     const { isLoading, articles, error } = this.state;
 
-    if (isLoading) return <p>Loading...</p>;
-    if (error) return <p>Error!!!</p>;
+    if (isLoading) return <LoadingPage />;
+    if (error) return <ErrorPage error={error} />;
 
     return (
       <main className="articlesContainer">
@@ -54,7 +56,9 @@ class Articles extends Component {
     const { topic } = this.props;
     api.getArticles({ topic, sort_by, order }).then(articles => {
       this.setState({ articles, isLoading: false });
-    });
+    }).catch(err => {
+      console.log(err)
+    })
   };
 }
 

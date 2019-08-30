@@ -8,12 +8,14 @@ class CommentPoster extends Component {
   };
 
   render() {
+    console.log(this.props)
     const { username, author } = this.props;
+    console.log(username, author)
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
           Comment:
-          <input type="text" name="body" onChange={this.handleChange} />
+          <input type="text" required name="body" onChange={this.handleChange} />
         </label>
         {author === username && <button>add comment!</button>}
       </form>

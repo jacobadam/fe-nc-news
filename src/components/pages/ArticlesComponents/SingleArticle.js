@@ -29,6 +29,8 @@ class SingleArticle extends Component {
       article_id
     } = article;
 
+    console.log(article.author, 'author')
+
     return (
       <div>
         <Link to={`/topics/${topic}`}>
@@ -43,7 +45,7 @@ class SingleArticle extends Component {
         <VotesUpdater
           username={this.props.username}
           votes={votes}
-          author={author}
+          author={article.author}
           article_id={article_id}
         />
         <br />
