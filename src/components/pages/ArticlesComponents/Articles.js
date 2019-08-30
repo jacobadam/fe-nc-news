@@ -43,6 +43,7 @@ class Articles extends Component {
   }
 
   componentDidMount() {
+// if on particular route i.e home page route - add the queries such as sort by votes
     this.fetchAllArticles();
   }
 
@@ -57,10 +58,11 @@ class Articles extends Component {
     api.getArticles({ topic, sort_by, order }).then(articles => {
       this.setState({ articles, isLoading: false });
     }).catch(err => {
+      console.log(err, ' err in articles')
       this.setState({
         error: {
           msg: "topic does not exist!",
-          status: err.response.status
+          status: ""
         },
         isLoading: false
       });

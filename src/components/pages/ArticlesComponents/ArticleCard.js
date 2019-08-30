@@ -10,7 +10,8 @@ const ArticleCard = props => {
     topic,
     votes,
     comment_count,
-    created_at
+    created_at,
+    username
   } = props.article;
   return (
     <div className="articleCard">
@@ -27,7 +28,7 @@ const ArticleCard = props => {
       <Link to={`/articles/${article_id}/comments`}>
         <p>comments: {comment_count}</p>
       </Link>
-      <VotesUpdater votes={votes} article_id={article_id} />
+      <VotesUpdater author={author} username={username} votes={votes} article_id={article_id} />
     </div>
   );
 };

@@ -19,6 +19,7 @@ class TopicsList extends Component {
     return (
       <main className="topicsContainer">
         <section className="topicsList">
+          <h2>All Topics</h2>
           {topics.map(topic => {
             return <TopicCard {...topic} key={topic.slug} />;
           })}
@@ -32,11 +33,14 @@ class TopicsList extends Component {
   }
 
   fetchAllTopics() {
-    api.getTopics().then(topics => {
-      this.setState({ topics, isLoading: false });
-    }).catch(err => {
-      console.log(err, 'topics list error')
-    });
+    api
+      .getTopics()
+      .then(topics => {
+        this.setState({ topics, isLoading: false });
+      })
+      .catch(err => {
+        console.log(err, "topics list error");
+      });
   }
 }
 

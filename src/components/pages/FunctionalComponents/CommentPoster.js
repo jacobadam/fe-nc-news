@@ -8,7 +8,6 @@ class CommentPoster extends Component {
   };
 
   render() {
-    console.log(this.props)
     const { username, author } = this.props;
     console.log(username, author)
     return (

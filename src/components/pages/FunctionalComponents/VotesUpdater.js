@@ -14,7 +14,7 @@ class VotesUpdater extends Component {
     return (
       <>
         <p>Votes: {votes + newVoteCount}</p>
-        {author === username && (
+        {author === username && username === null (
           <button
             onClick={() => this.updateVotes(1)}
             disabled={newVoteCount === 1}
@@ -38,6 +38,7 @@ class VotesUpdater extends Component {
   updateVotes = voteDifference => {
     const { article_id } = this.props;
     this.setState(currentState => {
+      console.log(currentState, 'current state in vote updater')
       return { newVoteCount: currentState.newVoteCount + voteDifference };
     });
     api.patchVotes(voteDifference, article_id).catch(error => {

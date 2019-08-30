@@ -21,7 +21,12 @@ const CommentCard = props => {
       </Link>
       <h2>Created: {new Date(created_at).toLocaleString()}</h2>
       <h2>{body}</h2>
-      <VotesUpdater votes={votes} article_id={article_id} />
+      <VotesUpdater
+        author={author}
+        username={username}
+        votes={votes}
+        article_id={article_id}
+      />
       {author === username && (
         <button type="submit" onClick={() => removeComment(comment_id)}>
           Delete Comment!

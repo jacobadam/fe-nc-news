@@ -6,7 +6,12 @@ const Header = props => {
   return (
     <div className="headerBar">
       <h1>NC-NEWS</h1>
-      <h2 className="loggedIn">Logged in as {username}</h2>
+      {username ? (
+        <h2 className="loggedIn">Logged in as {username}</h2>
+      ) : (
+        <h2 className="loggedIn">Not logged in :(</h2>
+      )}
+
       <Link to="/">
         <button>Homepage</button>
       </Link>

@@ -15,7 +15,7 @@ class SingleArticle extends Component {
 
   render() {
     const { isLoading, article, error } = this.state;
-    if (isLoading) return <LoadingPage/>
+    if (isLoading) return <LoadingPage />;
     if (error) return <ErrorPage error={error} />;
 
     const {
@@ -29,7 +29,8 @@ class SingleArticle extends Component {
       article_id
     } = article;
 
-    console.log(article.author, 'author')
+    console.log(article.author, "author on Single article");
+    console.log(this.props.username, "adsa");
 
     return (
       <div>
@@ -45,7 +46,7 @@ class SingleArticle extends Component {
         <VotesUpdater
           username={this.props.username}
           votes={votes}
-          author={article.author}
+          author={author}
           article_id={article_id}
         />
         <br />

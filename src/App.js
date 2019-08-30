@@ -8,12 +8,12 @@ import TopicPage from "./components/pages/TopicsComponents/TopicsPage";
 import Users from "./components/pages/UsersComponents/Users";
 import SingleArticle from "./components/pages/ArticlesComponents/SingleArticle";
 import CommentPage from "./components/pages/CommentsComponents/CommentPage";
-import ErrorPage from './components/pages/FunctionalComponents/ErrorPage'
+import ErrorPage from "./components/pages/FunctionalComponents/ErrorPage";
 import "bootstrap/dist/css/bootstrap.css";
 
 class App extends Component {
   state = {
-    username: "jessjelly" //add an if statement to show 'not logged in/Log In' if username is an empty string
+    username: 'jessjelly'
   };
   render() {
     const { username } = this.state;
@@ -31,7 +31,10 @@ class App extends Component {
             username={username}
             path="/articles/:article_id/comments"
           />
-          <ErrorPage default error={{status: 404, msg: ': Page not found!'}}/>
+          <ErrorPage
+            default
+            error={{ status: 404, msg: ": Page not found!" }}
+          />
         </Router>
       </div>
     );
