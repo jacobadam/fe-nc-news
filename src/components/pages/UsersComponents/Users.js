@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import * as api from "../../../api";
 import UsernameCard from "./UsernameCard";
 import LoadingPage from "../FunctionalComponents/LoadingPage";
+import ErrorPage from "../FunctionalComponents/ErrorPage";
 
 class Users extends Component {
   state = {
@@ -14,7 +15,7 @@ class Users extends Component {
     const { isLoading, users, error } = this.state;
 
     if (isLoading) return <LoadingPage />;
-    if (error) return <p>Error!!!</p>;
+    if (error) return <ErrorPage error={error} />;
 
     return (
       <div>
@@ -32,9 +33,21 @@ class Users extends Component {
 
   fetchUser() {
     const { username } = this.props;
-    api.getUser(username).then(users => {
-      this.setState({ users, isLoading: false });
-    });
+    api
+      .getUser(username)
+      .then(users => {
+        this.setState({ users, isLoading: false });
+      })
+      .catch(err => {
+        console.log(err, "User error");
+        this.setState({
+          error: {
+            msg: "User does not exist!",
+            status: err.response.status
+          },
+          isLoading: false
+        });
+      });
   }
 }
 

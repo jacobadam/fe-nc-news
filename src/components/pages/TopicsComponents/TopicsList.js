@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import * as api from "../../../api";
 import TopicCard from "./TopicCard";
-import LoadingPage from '../FunctionalComponents/LoadingPage'
+import LoadingPage from "../FunctionalComponents/LoadingPage";
+import ErrorPage from "../FunctionalComponents/ErrorPage";
 
 class TopicsList extends Component {
   state = {
@@ -13,7 +14,7 @@ class TopicsList extends Component {
     const { isLoading, topics, error } = this.state;
 
     if (isLoading) return <LoadingPage />;
-    if (error) return <p>Error!!!</p>;
+    if (error) return <ErrorPage error={error} />;
 
     return (
       <main className="topicsContainer">
@@ -30,10 +31,11 @@ class TopicsList extends Component {
     this.fetchAllTopics();
   }
 
-
   fetchAllTopics() {
     api.getTopics().then(topics => {
       this.setState({ topics, isLoading: false });
+    }).catch(err => {
+      console.log(err, 'topics list error')
     });
   }
 }

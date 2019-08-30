@@ -57,7 +57,14 @@ class Articles extends Component {
     api.getArticles({ topic, sort_by, order }).then(articles => {
       this.setState({ articles, isLoading: false });
     }).catch(err => {
-      console.log(err)
+      this.setState({
+        error: {
+          msg: "topic does not exist!",
+          status: err.response.status
+        },
+        isLoading: false
+      });
+      console.log(err, 'all articles error')
     })
   };
 }
