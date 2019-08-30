@@ -30,7 +30,7 @@ class SingleArticle extends Component {
     } = article;
 
     console.log(article.author, "author on Single article");
-    console.log(this.props.username, "adsa");
+    console.log(this.props.username, "username in single article");
 
     return (
       <div>

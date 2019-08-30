@@ -14,7 +14,7 @@ class VotesUpdater extends Component {
     return (
       <>
         <p>Votes: {votes + newVoteCount}</p>
-        {author === username && username === null (
+        {author === username && (
           <button
             onClick={() => this.updateVotes(1)}
             disabled={newVoteCount === 1}
