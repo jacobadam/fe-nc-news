@@ -67,13 +67,10 @@ class CommentPage extends Component {
 
   addNewComment = comment => {
     this.setState(prevState => {
-      console.log(prevState, "<<prev state");
       return {
-        comments: [comment,...prevState.comments]
+        comments: [comment, ...prevState.comments]
       };
     });
-    // set state [comment, ...comments]
-    //pass down to CommentPoster and invoke in correct place
   };
 
   removeComment = comment_id => {

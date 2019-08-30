@@ -9,7 +9,6 @@ class CommentPoster extends Component {
 
   render() {
     const { username, author } = this.props;
-    console.log(username, author);
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
@@ -40,12 +39,8 @@ class CommentPoster extends Component {
     const { article_id, username } = this.props;
     const { body } = this.state;
     api.postComment(username, body, article_id).then(comment => {
-      console.log(comment, 'comment in comment poster ');
-      this.props.addNewComment(comment)
-      })
-      .catch(err => {
-        console.log(err);
-      });
+      this.props.addNewComment(comment);
+    });
   };
 }
 

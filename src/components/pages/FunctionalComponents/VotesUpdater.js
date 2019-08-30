@@ -38,7 +38,6 @@ class VotesUpdater extends Component {
   updateVotes = voteDifference => {
     const { article_id } = this.props;
     this.setState(currentState => {
-      console.log(currentState, 'current state in vote updater')
       return { newVoteCount: currentState.newVoteCount + voteDifference };
     });
     api.patchVotes(voteDifference, article_id).catch(error => {

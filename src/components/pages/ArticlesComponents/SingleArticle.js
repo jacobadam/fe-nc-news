@@ -29,9 +29,6 @@ class SingleArticle extends Component {
       article_id
     } = article;
 
-    console.log(article.author, "author on Single article");
-    console.log(this.props.username, "username in single article");
-
     return (
       <div>
         <Link to={`/topics/${topic}`}>

@@ -53,7 +53,6 @@ export const postComment = (username, body, article_id) => {
       body: body
     })
     .then(({ data }) => {
-      console.log(data.comment, "DATA IN API");
       return data.comment;
     });
 };

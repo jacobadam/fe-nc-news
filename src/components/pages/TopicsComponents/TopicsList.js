@@ -38,9 +38,7 @@ class TopicsList extends Component {
       .then(topics => {
         this.setState({ topics, isLoading: false });
       })
-      .catch(err => {
-        console.log(err, "topics list error");
-      });
+      .catch(err => {});
   }
 }
 

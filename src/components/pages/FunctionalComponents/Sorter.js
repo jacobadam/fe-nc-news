@@ -22,12 +22,10 @@ class Sorter extends Component {
   }
 
   handleSortByChange = e => {
-    console.log(e.target.value);
     this.setState({ sort_by: e.target.value });
   };
 
   handleOrderChange = e => {
-    console.log(e.target.value);
     this.setState({ order: e.target.value });
   };
 

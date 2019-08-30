@@ -43,7 +43,7 @@ class Articles extends Component {
   }
 
   componentDidMount() {
-// if on particular route i.e home page route - add the queries such as sort by votes
+    // if on particular route i.e home page route - add the queries such as sort by votes
     this.fetchAllArticles();
   }
 
@@ -55,19 +55,20 @@ class Articles extends Component {
 
   fetchAllArticles = (sort_by, order) => {
     const { topic } = this.props;
-    api.getArticles({ topic, sort_by, order }).then(articles => {
-      this.setState({ articles, isLoading: false });
-    }).catch(err => {
-      console.log(err, ' err in articles')
-      this.setState({
-        error: {
-          msg: "topic does not exist!",
-          status: ""
-        },
-        isLoading: false
+    api
+      .getArticles({ topic, sort_by, order })
+      .then(articles => {
+        this.setState({ articles, isLoading: false });
+      })
+      .catch(err => {
+        this.setState({
+          error: {
+            msg: "topic does not exist!",
+            status: ""
+          },
+          isLoading: false
+        });
       });
-      console.log(err, 'all articles error')
-    })
   };
 }
 

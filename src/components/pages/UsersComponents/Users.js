@@ -39,7 +39,6 @@ class Users extends Component {
         this.setState({ users, isLoading: false });
       })
       .catch(err => {
-        console.log(err, "User error");
         this.setState({
           error: {
             msg: "User does not exist!",
