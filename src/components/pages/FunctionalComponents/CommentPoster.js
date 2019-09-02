@@ -8,7 +8,7 @@ class CommentPoster extends Component {
   };
 
   render() {
-    const { username, author } = this.props;
+    const { username } = this.props;
     return (
       <form onSubmit={this.handleSubmit}>
         <label>

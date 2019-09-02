@@ -9,7 +9,7 @@ import Users from "./components/pages/UsersComponents/Users";
 import SingleArticle from "./components/pages/ArticlesComponents/SingleArticle";
 import CommentPage from "./components/pages/CommentsComponents/CommentPage";
 import ErrorPage from "./components/pages/FunctionalComponents/ErrorPage";
-import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
   state = {
@@ -23,7 +23,7 @@ class App extends Component {
         <Router primary={false}>
           <Homepage username={username} path="/" />
           <Articles username={username} path="/articles" />
-          <Articles path="/topics/:topic" />
+          <Articles username={username}path="/topics/:topic" />
           <TopicPage path="/topics" />
           <SingleArticle username={username} path="/articles/:article_id" />
           <Users path="/users/:username" />

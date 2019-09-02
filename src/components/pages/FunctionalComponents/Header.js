@@ -5,7 +5,9 @@ const Header = props => {
   const { username } = props;
   return (
     <div className="headerBar">
-      <h1>NC-NEWS</h1>
+      <h3>
+        <span className="badge badge-secondary">NC NEWS</span>
+      </h3>
       {username ? (
         <h2 className="loggedIn">Logged in as {username}</h2>
       ) : (
@@ -13,22 +15,34 @@ const Header = props => {
       )}
 
       <Link to="/">
-        <button>Homepage</button>
+        <button type="button" className="btn btn-outline-primary">
+          Home
+        </button>
       </Link>
       <Link to="/articles">
-        <button>Articles</button>
+        <button type="button" className="btn btn-outline-secondary">
+          Articles
+        </button>
       </Link>
       <Link to="/topics">
-        <button>All Topics</button>
+        <button type="button" className="btn btn-outline-success">
+          All Topics
+        </button>
       </Link>
       <Link to="/topics/coding">
-        <button>Coding</button>
+        <button type="button" className="btn btn-outline-danger">
+          Coding
+        </button>
       </Link>
       <Link to="/topics/football">
-        <button>Football</button>
+        <button type="button" className="btn btn-outline-warning">
+          Football
+        </button>
       </Link>
       <Link to="/topics/cooking">
-        <button>Cooking</button>
+        <button type="button" className="btn btn-outline-info">
+          Cooking
+        </button>
       </Link>
     </div>
   );

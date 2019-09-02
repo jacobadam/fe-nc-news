@@ -5,7 +5,7 @@
 .headerBar {
   height: 100;
   widows: 100;
-  background-image: url("http://webmadewell.com/wp-content/uploads/2018/01/img-bg-sample-parallax-header.jpg");
+  background-image: url("https://www.pixel4k.com/wp-content/uploads/2018/11/dark-black-simple-background-4k_1541970824.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -27,6 +27,18 @@ h1 {
     sans-serif;
 }
 
+.homepageHeader {
+  padding: 10% 0 5%;
+  margin-left: auto;
+  margin-right: auto;
+  color: salmon;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Montserrat",
+    sans-serif;
+  background-color: whitesmoke;
+
+}
+
 .articleHeader {
   font-family: "Montserrat",
     sans-serif;
@@ -34,14 +46,15 @@ h1 {
 
 .homepageHeader {
   font-family: "Montserrat",
-  sans-serif;
+    sans-serif;
 }
 
+/* 
 .articlesList {
   border-style: solid;
   border-width: 10px;
   width: 100%;
-}
+} */
 
 .loggedIn {
   position: relative;
@@ -55,10 +68,9 @@ h1 {
     sans-serif;
 }
 
-.articleCard {
-  border-style: solid;
-  border-width: 100%;
-  border-color: slateblue
+.card-body {
+  background-color: whitesmoke;
+  font-style: oblique;
 }
 
 .commentCard {
