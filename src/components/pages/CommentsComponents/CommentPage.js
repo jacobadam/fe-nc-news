@@ -75,6 +75,11 @@ class CommentPage extends Component {
 
   removeComment = comment_id => {
     api.deleteComment(comment_id);
+    this.setState(({ comments }) => {
+      return {
+        comments: comments.filter(comment => comment.comment_id !== comment_id)
+      };
+    });
   };
 }
 

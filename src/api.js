@@ -35,13 +35,13 @@ export const getComments = article_id => {
   return axios
     .get(`${baseURL}/articles/${article_id}/comments`)
     .then(({ data }) => {
-      const { comments } = data;
-      return comments;
+      return data.comments;
     });
 };
 
-export const patchVotes = (voteDifference, article_id) => {
+export const patchVotes = (voteDifference, article_id, comment_id) => {
   return axios.patch(`${baseURL}/articles/${article_id}`, {
+    // seperate patch votes func or can i re use this one for /comments/:comment_id
     inc_votes: voteDifference
   });
 };
