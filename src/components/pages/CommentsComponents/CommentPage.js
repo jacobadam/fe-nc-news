@@ -4,7 +4,6 @@ import CommentCard from "./CommentCard";
 import CommentPoster from "../FunctionalComponents/CommentPoster";
 import LoadingPage from "../FunctionalComponents/LoadingPage";
 import ErrorPage from "../FunctionalComponents/ErrorPage";
-// import { navigate } from "@reach/router";
 
 class CommentPage extends Component {
   state = {

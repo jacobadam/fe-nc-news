@@ -9,7 +9,6 @@ class VotesUpdater extends Component {
   };
 
   render() {
-    console.log(this.props ,'votes updator')
     const { votes, username } = this.props;
     const { newVoteCount, error } = this.state;
 
@@ -45,7 +44,8 @@ class VotesUpdater extends Component {
       return { newVoteCount: currentState.newVoteCount + voteDifference };
     });
     api.patchVotes(voteDifference, article_id, comment_id).catch(error => {
-      console.log(comment_id, 'comment ID in PATCH VOTES - VOTE UPDATOR')
+      console.log(comment_id, "comment ID in PATCH VOTES - VOTE UPDATOR");
+      console.log(article_id, "article ID in PATCH VOTES - VOTE UPDATOR");
       this.setState(currentState => {
         return {
           newVoteCount: currentState.newVoteCount - voteDifference,

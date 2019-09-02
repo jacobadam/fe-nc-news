@@ -40,10 +40,15 @@ export const getComments = article_id => {
 };
 
 export const patchVotes = (voteDifference, article_id, comment_id) => {
-  return axios.patch(`${baseURL}/articles/${article_id}`, {
-    // seperate patch votes func or can i re use this one for /comments/:comment_id
-    inc_votes: voteDifference
-  });
+  if (comment_id) {
+    return axios.patch(`${baseURL}/comments/${comment_id}`, {
+      inc_votes: voteDifference
+    });
+  } else {
+    return axios.patch(`${baseURL}/articles/${article_id}`, {
+      inc_votes: voteDifference
+    });
+  }
 };
 
 export const postComment = (username, body, article_id) => {

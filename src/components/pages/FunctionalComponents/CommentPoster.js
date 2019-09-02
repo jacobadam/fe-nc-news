@@ -9,18 +9,21 @@ class CommentPoster extends Component {
 
   render() {
     const { username } = this.props;
+    const { body } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
-          Comment:
           <input
+            value={body}
             type="text"
             required
             name="body"
             onChange={this.handleChange}
           />
         </label>
-        {username && <button>add comment!</button>}
+        {username && (
+          <button className="btn btn-secondary">add comment!</button>
+        )}
       </form>
     );
   }
@@ -33,6 +36,7 @@ class CommentPoster extends Component {
   handleSubmit = e => {
     e.preventDefault();
     this.addComment();
+    this.setState({ username: "", body: "" });
   };
 
   addComment = () => {

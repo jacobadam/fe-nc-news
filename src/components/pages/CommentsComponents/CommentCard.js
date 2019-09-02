@@ -15,8 +15,6 @@ const CommentCard = props => {
     username
   } = props;
 
-  console.log(comment_id, 'comment id in comment card')
-
   return (
     <div className="commentCard" key={article_id}>
       <Link to={`/users/${author}`}>
@@ -37,7 +35,6 @@ const CommentCard = props => {
           type="submit"
           onClick={() => removeComment(comment_id)}
         >
-          {" "}
           Delete Comment!
         </button>
       )}
