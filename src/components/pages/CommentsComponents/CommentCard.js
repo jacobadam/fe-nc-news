@@ -17,27 +17,35 @@ const CommentCard = props => {
 
   return (
     <div className="commentCard" key={article_id}>
-      <Link to={`/users/${author}`}>
-        <h2>{author}</h2>
-      </Link>
-      <h2>: {new Date(created_at).toLocaleString()}</h2>
-      <h2>{body}</h2>
-      <VotesUpdater
-        author={author}
-        username={username}
-        votes={votes}
-        article_id={article_id}
-        comment_id={comment_id}
-      />
-      {author === username && (
-        <button
-          className="btn btn-secondary"
-          type="submit"
-          onClick={() => removeComment(comment_id)}
-        >
-          Delete Comment!
-        </button>
-      )}
+      <div className="card-group">
+        <div className="card">
+          <div className="card-body">
+            <Link to={`/users/${author}`}>
+              <h2 className="singleArticleTextCommentAuthor">{author}</h2>
+            </Link>
+            <h2 className="singleArticleTextComment">
+              Created: {new Date(created_at).toLocaleString()}
+            </h2>
+            <h2 className="singleArticleTextComment">{body}</h2>
+            <VotesUpdater
+              author={author}
+              username={username}
+              votes={votes}
+              article_id={article_id}
+              comment_id={comment_id}
+            />
+            {author === username && (
+              <button
+                className="btn btn-secondary"
+                type="submit"
+                onClick={() => removeComment(comment_id)}
+              >
+                Delete Comment!
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
