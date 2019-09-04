@@ -28,15 +28,14 @@ h1 {
 }
 
 .homepageHeader {
-  padding: 10% 0 5%;
+  margin-top: auto;
+  margin-bottom: auto;
   margin-left: auto;
   margin-right: auto;
   color: salmon;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   font-family: "Montserrat",
     sans-serif;
-  background-color: whitesmoke;
-
 }
 
 .articleHeader {
@@ -47,6 +46,12 @@ h1 {
 .homepageHeader {
   font-family: "Montserrat",
     sans-serif;
+  background-color: bisque;
+
+}
+
+.sortContainer {
+  background-color: bisque;
 }
 
 /* 
@@ -69,7 +74,7 @@ h1 {
 }
 
 .card-body {
-  background-color: whitesmoke;
+  background-color: bisque;
   font-style: oblique;
 }
 
@@ -78,4 +83,44 @@ h1 {
   border-width: 100%;
   border-color: palegreen;
   font-size: 15px;
+}
+
+.allTopicsHeader {
+  background-color: bisque;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.topicsContainer {
+background-color: bisque;
+margin-top: auto;
+margin-bottom: auto;
+margin-left: auto;
+margin-right: auto;
+}
+
+.topicsPage {
+background-color: bisque;
+margin-top: auto;
+margin-bottom: auto;
+margin-left: auto;
+margin-right: auto;
+}
+
+.topicsMainPage {
+  background-color: bisque;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.topicsList {
+background-color: bisque;
+margin-top: auto;
+margin-bottom: auto;
+margin-left: auto;
+margin-right: auto;
 }

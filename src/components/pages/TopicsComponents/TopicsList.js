@@ -21,7 +21,7 @@ class TopicsList extends Component {
     return (
       <main className="topicsContainer">
         <section className="topicsList">
-          <h2 className="allTopicsHead">All Topics</h2>
+          <h2 className="allTopicsHeader">All Topics</h2>
           {topics.map(topic => {
             return <TopicCard {...topic} key={topic.slug} />;
           })}

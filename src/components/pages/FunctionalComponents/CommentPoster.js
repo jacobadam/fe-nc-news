@@ -22,7 +22,7 @@ class CommentPoster extends Component {
           />
         </label>
         {username && (
-          <button className="btn btn-secondary">add comment!</button>
+          <button className="btn btn-secondary" >add comment!</button>
         )}
       </form>
     );

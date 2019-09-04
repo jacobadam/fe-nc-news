@@ -31,7 +31,7 @@ const CommentCard = props => {
       />
       {author === username && (
         <button
-          className="btn btn-success"
+          className="btn btn-secondary"
           type="submit"
           onClick={() => removeComment(comment_id)}
         >

@@ -24,7 +24,6 @@ class Articles extends Component {
       <main className="articlesContainer">
         <Sorter fetchAllArticles={this.fetchAllArticles} />
         <section className="articlesList">
-          <h2 className="articleHeader">Articles</h2>
           {articles.map(article => {
             return (
               <ArticleCard

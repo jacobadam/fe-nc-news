@@ -17,7 +17,7 @@ class VotesUpdater extends Component {
         <p>Votes: {votes + newVoteCount}</p>
         {username && (
           <button
-            className="btn btn-dark"
+            className="btn btn-success"
             onClick={() => this.updateVotes(1)}
             disabled={newVoteCount === 1}
           >
@@ -26,7 +26,7 @@ class VotesUpdater extends Component {
         )}
         {username && (
           <button
-            className="btn btn-dark"
+            className="btn btn-danger"
             onClick={() => this.updateVotes(-1)}
             disabled={newVoteCount === -1}
           >

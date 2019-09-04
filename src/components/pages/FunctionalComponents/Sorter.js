@@ -5,17 +5,23 @@ class Sorter extends Component {
   render() {
     return (
       <>
-        <form onSubmit={this.handleSubmit}>
-          <select onChange={this.handleSortByChange}>
+        <form className="sortContainer"onSubmit={this.handleSubmit}>
+          <select
+            className="btn btn-secondary btn-sm dropdown-toggle"
+            onChange={this.handleSortByChange}
+          >
             <option value="created_at">Date Posted</option>
             <option value="comment_count">Comment Count</option>
             <option value="votes">Total Votes</option>
           </select>
-          <select onChange={this.handleOrderChange}>
+          <select
+            className="btn btn-secondary btn-sm dropdown-toggle"
+            onChange={this.handleOrderChange}
+          >
             <option value="asc">Ascending</option>
             <option value="desc">Descending</option>
           </select>
-          <button>Sort!</button>
+          <button className="btn btn-success">Sort!</button>
         </form>
       </>
     );
