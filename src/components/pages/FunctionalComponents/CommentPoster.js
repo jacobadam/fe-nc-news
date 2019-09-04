@@ -11,7 +11,7 @@ class CommentPoster extends Component {
     const { username } = this.props;
     const { body } = this.state;
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className="commentPoster"onSubmit={this.handleSubmit}>
         <label>
           <input
             value={body}

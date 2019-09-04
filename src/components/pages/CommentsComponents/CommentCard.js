@@ -20,7 +20,7 @@ const CommentCard = props => {
       <Link to={`/users/${author}`}>
         <h2>{author}</h2>
       </Link>
-      <h2>Created: {new Date(created_at).toLocaleString()}</h2>
+      <h2>: {new Date(created_at).toLocaleString()}</h2>
       <h2>{body}</h2>
       <VotesUpdater
         author={author}

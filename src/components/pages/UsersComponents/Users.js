@@ -20,7 +20,7 @@ class Users extends Component {
     return (
       <div>
         <main className="userContainer">
-          <h1>User Details</h1>
+          <h1 className="userHeader">User Details</h1>
           <UsernameCard {...users} key={users.username} />
         </main>
       </div>

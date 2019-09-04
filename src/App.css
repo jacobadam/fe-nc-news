@@ -46,12 +46,11 @@ h1 {
 .homepageHeader {
   font-family: "Montserrat",
     sans-serif;
-  background-color: bisque;
-
+  background-color: floralwhite;
 }
 
 .sortContainer {
-  background-color: bisque;
+  background-color: floralwhite;
 }
 
 /* 
@@ -74,7 +73,7 @@ h1 {
 }
 
 .card-body {
-  background-color: bisque;
+  background-color: floralwhite;
   font-style: oblique;
 }
 
@@ -86,7 +85,8 @@ h1 {
 }
 
 .allTopicsHeader {
-  background-color: bisque;
+  color: salmon;
+  background-color: floralwhite;
   margin-top: auto;
   margin-bottom: auto;
   margin-left: auto;
@@ -94,23 +94,23 @@ h1 {
 }
 
 .topicsContainer {
-background-color: bisque;
-margin-top: auto;
-margin-bottom: auto;
-margin-left: auto;
-margin-right: auto;
+  background-color: floralwhite;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .topicsPage {
-background-color: bisque;
-margin-top: auto;
-margin-bottom: auto;
-margin-left: auto;
-margin-right: auto;
+  background-color: floralwhite;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .topicsMainPage {
-  background-color: bisque;
+  background-color: floralwhite;
   margin-top: auto;
   margin-bottom: auto;
   margin-left: auto;
@@ -118,9 +118,51 @@ margin-right: auto;
 }
 
 .topicsList {
-background-color: bisque;
-margin-top: auto;
-margin-bottom: auto;
-margin-left: auto;
-margin-right: auto;
+  background-color: floralwhite;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.commentCard {
+  background-color: floralwhite;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
+
+.commentPoster {
+  background-color: floralwhite;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.userCard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  background-color: black;
+}
+
+.userHeader {
+  color: salmon;
+
+}
+
+.userContainer {
+  background-color: floralwhite;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.userName {
+  color: salmon;
 }
