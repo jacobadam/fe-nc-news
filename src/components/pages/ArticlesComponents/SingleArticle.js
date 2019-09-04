@@ -30,16 +30,16 @@ class SingleArticle extends Component {
     } = article;
 
     return (
-      <div>
+      <div className="singleArticle">
         <Link to={`/topics/${topic}`}>
           <p>{topic}</p>
         </Link>
-        <h1>{title}</h1>
+        <h2 className="singleArticleText">{title}</h2>
         <Link to={`/users/${author}`}>
           <p>{author}</p>
         </Link>
-        <p>{body}</p>
-        <p>Created: {new Date(created_at).toLocaleString()}</p>
+        <p className="singleArticleText">{body}</p>
+        <p className="singleArticleText">Created: {new Date(created_at).toLocaleString()}</p>
         <VotesUpdater
           username={this.props.username}
           votes={votes}
@@ -48,7 +48,7 @@ class SingleArticle extends Component {
         />
         <br />
         <Link to={`/articles/${article_id}/comments`}>
-          <p>comments: {comment_count}</p>
+          <p className="singleArticleText">comments: {comment_count}</p>
         </Link>
         <CommentPage
           username={this.props.username}

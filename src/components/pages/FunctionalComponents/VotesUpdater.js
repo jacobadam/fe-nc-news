@@ -14,7 +14,7 @@ class VotesUpdater extends Component {
 
     return (
       <>
-        <p>Votes: {votes + newVoteCount}</p>
+        <p className="voteScore">Votes: {votes + newVoteCount}</p>
         {username && (
           <button
             className="btn btn-success"

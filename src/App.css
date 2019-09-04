@@ -32,6 +32,7 @@ h1 {
   margin-bottom: auto;
   margin-left: auto;
   margin-right: auto;
+  padding: 2%;
   color: salmon;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   font-family: "Montserrat",
@@ -41,6 +42,23 @@ h1 {
 .articleHeader {
   font-family: "Montserrat",
     sans-serif;
+}
+
+.singleArticleText {
+  color: black;
+}
+
+.voteScore {
+  color: red;
+}
+
+.singleArticle {
+color: salmon;
+background-color: floralwhite;
+margin-top: auto;
+margin-bottom: auto;
+margin-left: auto;
+margin-right: auto;
 }
 
 .homepageHeader {
