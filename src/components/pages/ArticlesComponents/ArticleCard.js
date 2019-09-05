@@ -19,6 +19,8 @@ const ArticleCard = props => {
     <div className="card-group">
       <div className="card">
         <div className="card-body">
+          {topic && <h2 className="allTopicsHeader">Topics for {topic}</h2>}
+          {!topic && <h2 className="allTopicsHeader">All Articles</h2>}
           <Link to={`/topics/${topic}`}>
             <p>{topic}</p>
           </Link>
