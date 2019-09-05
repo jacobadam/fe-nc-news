@@ -10,10 +10,15 @@ All data come from own implementation of the Northcoders News API server availab
 
 All front end implementation of the Northcoders News available [here](https://netlify-jjacoba.netlify.com/) and git repository [here](https://github.com/jjacoba/fe-nc-news).
 
-### `npm test`
+## Setup
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You will need Node.js, npm and git installed before being able to run this project.
+
+* To check if ```Node.js``` is installed on your machine open a terminal window and enter:
+
+```
+$ node -v
+```
 
 ### `npm run build`
 
