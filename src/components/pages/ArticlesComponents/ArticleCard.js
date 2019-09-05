@@ -25,11 +25,11 @@ const ArticleCard = props => {
           <Link to={`/articles/${article_id}`}>
             <p>{title}</p>
           </Link>
-          <h4>
+          <h4 className="singleArticleTextComment">
             Created by:
             <Link to={`/users/${author}`}>
               <p>{author}</p>
-            </Link>
+            </Link> 
             On: {new Date(created_at).toLocaleString()}
           </h4>
           <Link to={`/articles/${article_id}/comments`}>

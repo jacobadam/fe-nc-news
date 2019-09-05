@@ -20,8 +20,6 @@ class Articles extends Component {
     if (isLoading) return <LoadingPage />;
     if (error) return <ErrorPage error={error} />;
 
-    console.log(this.props.topic);
-
     const { topic } = this.props;
 
     return (
