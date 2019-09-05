@@ -19,7 +19,6 @@ const ArticleCard = props => {
     <div className="card-group">
       <div className="card">
         <div className="card-body">
-          <p>Topic: </p>
           <Link to={`/topics/${topic}`}>
             <p>{topic}</p>
           </Link>
