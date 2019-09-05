@@ -20,10 +20,16 @@ class Articles extends Component {
     if (isLoading) return <LoadingPage />;
     if (error) return <ErrorPage error={error} />;
 
+    console.log(this.props.topic);
+
+    const { topic } = this.props;
+
     return (
       <main className="articlesContainer">
         <Sorter fetchAllArticles={this.fetchAllArticles} />
         <section className="articlesList">
+          {topic && <h2 className="allTopicsHeader">Topics for {topic}</h2>}
+          {!topic && <h2 className="allTopicsHeader">All Articles</h2>}
           {articles.map(article => {
             return (
               <ArticleCard
