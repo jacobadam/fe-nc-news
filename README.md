@@ -1,16 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Northcoders NC News
 
-## Available Scripts
+## About
 
-In the project directory, you can run:
+Northcoders News is a social news aggregation site developed with React and React-Bootsrap.
 
-### `npm start`
+Northcoders News has articles which are divided into topics. Each article has user curated ratings and can be up or down voted using the API, as long as a user is logged in. Users can also add comments about an article. Comments can also be up or down voted. A user can remove any comments which they have added.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+All data come from own implementation of the Northcoders News API server available [https://jacob-nc-news.herokuapp.com/api/](https://jacob-nc-news.herokuapp.com/api/) and git repository [https://github.com/jjacoba/be-nc-news](https://github.com/jjacoba/be-nc-news).
 
 ### `npm test`
 
