@@ -6,7 +6,7 @@ Northcoders News is a social news aggregation site developed with React and Reac
 
 Northcoders News has articles which are divided into topics. Each article has user curated ratings and can be up or down voted using the API, as long as a user is logged in. Users can also add comments about an article. Comments can also be up or down voted. A user can remove any comments which they have added.
 
-All data come from own implementation of the Northcoders News API server available [https://jacob-nc-news.herokuapp.com/api/](https://jacob-nc-news.herokuapp.com/api/) and git repository [https://github.com/jjacoba/be-nc-news](https://github.com/jjacoba/be-nc-news).
+All data come from own implementation of the Northcoders News API server available [https://jacob-nc-news.herokuapp.com/api/](here) and git repository [https://github.com/jjacoba/be-nc-news](https://github.com/jjacoba/be-nc-news).
 
 ### `npm test`
 
