@@ -20,6 +20,24 @@ You will need Node.js, npm and git installed before being able to run this proje
 $ node -v
 ```
 
+If you do not already have Node.js installed follow the instructions on this [guide](https://nodejs.org/en/download/package-manager/).
+
+* To check if ```npm``` is installed on your machine enter this command in you terminal window:
+
+```
+$ npm -v
+```
+
+If you do not have npm already installed follow this [guide](https://www.npmjs.com/get-npm) to set it up.
+
+* To check if ```git``` is installed on your machine enter the following in your terminal window:
+
+```
+$ git --version
+```
+
+If you do not already have git installed on your machine follow this [guide](https://git-scm.com/).
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.<br>
