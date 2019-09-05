@@ -8,6 +8,8 @@ Northcoders News has articles which are divided into topics. Each article has us
 
 All data come from own implementation of the Northcoders News API server available [here](https://jacob-nc-news.herokuapp.com/api/) and git repository [here](https://github.com/jjacoba/be-nc-news).
 
+All front end implementation of the Northcoders News available [here](https://netlify-jjacoba.netlify.com/) and git repository [here](https://github.com/jjacoba/fe-nc-news).
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br>
