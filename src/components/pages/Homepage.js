@@ -12,6 +12,4 @@ const Homepage = props => {
   );
 };
 
-// Homepage should show articles component with a few changes (most popular + only show top 5 + sort by votes)
-
 export default Homepage;

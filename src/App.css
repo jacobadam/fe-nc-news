@@ -1,6 +1,9 @@
 .App {
   text-align: center;
+  min-height: 100%;
 }
+
+/* NAV BAR */
 
 .headerBar {
   height: 100;
@@ -41,6 +44,8 @@ h1 {
   font-family: "Montserrat",
     sans-serif;
 }
+
+/* Articles */
 
 .articleHeader {
   font-family: "Montserrat",
@@ -100,14 +105,18 @@ h1 {
 .card-body {
   background-color: floralwhite;
   font-style: oblique;
+  min-width: 100%;
 }
 
 .commentCard {
   border-width: 100%;
   font-size: 15px;
+  min-width: 100%;
 }
 
 .allTopicsHeader {
+  min-height: 100%;
+  height: 100%;
   color: salmon;
   background-color: floralwhite;
   margin-top: auto;
@@ -117,6 +126,8 @@ h1 {
 }
 
 .topicsContainer {
+  min-height: 100%;
+  height: 100%;
   background-color: floralwhite;
   margin-top: auto;
   margin-bottom: auto;
@@ -130,13 +141,20 @@ h1 {
   margin: auto;
   text-align: center;
   background-color: black;
+  min-width: 100%;
 }
 
 .card-group {
+  min-height: 100%;
+  height: 100%;
   background-color: floralwhite;
+  min-width: 100%;
+  max-width: 100%;
 }
 
 .topicsPage {
+  min-height: 100%;
+  height: 100%;
   background-color: floralwhite;
   margin-top: auto;
   margin-bottom: auto;
@@ -145,6 +163,8 @@ h1 {
 }
 
 .topicsMainPage {
+  min-height: 100%;
+  height: 100%;
   background-color: floralwhite;
   margin-top: auto;
   margin-bottom: auto;
@@ -152,8 +172,13 @@ h1 {
   margin-right: auto;
 }
 
+main {
+  min-height: 100%;
+}
+
 .topicsList {
-  background-color: floralwhite;
+  min-height: 100%;
+  height: 100%;
   margin-top: auto;
   margin-bottom: auto;
   margin-left: auto;
@@ -167,6 +192,7 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   justify-content: space-between;
+  min-width: 100%;
 }
 
 .commentPoster {
@@ -183,6 +209,7 @@ h1 {
   margin: auto;
   text-align: center;
   background-color: black;
+  min-width: 100%;
 }
 
 .userHeader {
@@ -200,4 +227,8 @@ h1 {
 
 .userName {
   color: salmon;
+}
+
+.router-wrapper {
+  min-height: 100%;
 }

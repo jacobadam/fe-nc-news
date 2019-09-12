@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "@reach/router";
 import VotesUpdater from "../FunctionalComponents/VotesUpdater";
-// import CommentPoster from '../FunctionalComponents/CommentPoster';
 
 const CommentCard = props => {
   const {

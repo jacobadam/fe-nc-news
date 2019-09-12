@@ -46,7 +46,7 @@ class Articles extends Component {
   }
 
   componentDidMount() {
-    // if on particular route i.e home page route - add the queries such as sort by votes
+    
     this.fetchAllArticles();
   }
 

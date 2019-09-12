@@ -20,10 +20,10 @@ class App extends Component {
     return (
       <div className="App">
         <Header username={username} />
-        <Router primary={false}>
+        <Router className="router-wrapper" primary={false}>
           <Homepage username={username} path="/" />
           <Articles username={username} path="/articles" />
-          <Articles username={username}path="/topics/:topic" />
+          <Articles username={username} path="/topics/:topic" />
           <TopicPage path="/topics" />
           <SingleArticle username={username} path="/articles/:article_id" />
           <Users path="/users/:username" />

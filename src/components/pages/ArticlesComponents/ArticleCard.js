@@ -17,7 +17,7 @@ const ArticleCard = props => {
 
   return (
     <div className="card-group">
-      <div className="card">
+      <div className="card w-75">
         <div className="card-body">
           <Link to={`/topics/${topic}`}>
             <p>{topic}</p>
@@ -29,7 +29,7 @@ const ArticleCard = props => {
             Created by:
             <Link to={`/users/${author}`}>
               <p>{author}</p>
-            </Link> 
+            </Link>
             On: {new Date(created_at).toLocaleString()}
           </h4>
           <Link to={`/articles/${article_id}/comments`}>
