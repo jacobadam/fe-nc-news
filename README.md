@@ -60,7 +60,7 @@ $ git clone https://github.com/jjacoba/fe-nc-news
 Navigate inside the folder and install all dependencies by entering the following commands on your terminal window:
 
 ```
-$ cd nc-news
+$ cd fe-nc-news
 $ npm install
 ```
 
