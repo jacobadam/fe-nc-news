@@ -16,34 +16,30 @@ const ArticleCard = props => {
   const { username } = props;
 
   return (
-    <div className="card-group">
-      <div className="card w-75">
-        <div className="card-body">
-          <Link to={`/topics/${topic}`}>
-            <p>{topic}</p>
-          </Link>
-          <Link to={`/articles/${article_id}`}>
-            <p>{title}</p>
-          </Link>
-          <h4 className="singleArticleTextComment">
-            Created by:
-            <Link to={`/users/${author}`}>
-              <p>{author}</p>
-            </Link>
-            On: {new Date(created_at).toLocaleString()}
-          </h4>
-          <Link to={`/articles/${article_id}/comments`}>
-            <p>comments: {comment_count}</p>
-          </Link>
-          <VotesUpdater
-            author={author}
-            username={username}
-            votes={votes}
-            article_id={article_id}
-          />
-          <p className="card-text"></p>
-        </div>
-      </div>
+    <div className="custom-card">
+      <Link to={`/topics/${topic}`}>
+        <p>{topic}</p>
+      </Link>
+      <Link to={`/articles/${article_id}`}>
+        <p>{title}</p>
+      </Link>
+      <h4 className="singleArticleTextComment">
+        Created by:
+        <Link to={`/users/${author}`}>
+          <p>{author}</p>
+        </Link>
+        On: {new Date(created_at).toLocaleString()}
+      </h4>
+      <Link to={`/articles/${article_id}/comments`}>
+        <p>comments: {comment_count}</p>
+      </Link>
+      <VotesUpdater
+        author={author}
+        username={username}
+        votes={votes}
+        article_id={article_id}
+      />
+      <p className="card-text"></p>
     </div>
   );
 };

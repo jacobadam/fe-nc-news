@@ -19,25 +19,23 @@ class CommentPage extends Component {
     if (error) return <ErrorPage error={error} />;
 
     return (
-      <main className="commentsContainer">
-        <section className="commentsList">
-          <CommentPoster
-            addNewComment={this.addNewComment}
-            username={this.props.username}
-            article_id={article_id}
-          />
-          {comments.map(comment => {
-            return (
-              <CommentCard
-                addComment={this.addComment}
-                removeComment={this.removeComment}
-                username={this.props.username}
-                {...comment}
-                key={comment.comment_id}
-              />
-            );
-          })}
-        </section>
+      <main className="custom-container">
+        <CommentPoster
+          addNewComment={this.addNewComment}
+          username={this.props.username}
+          article_id={article_id}
+        />
+        {comments.map(comment => {
+          return (
+            <CommentCard
+              addComment={this.addComment}
+              removeComment={this.removeComment}
+              username={this.props.username}
+              {...comment}
+              key={comment.comment_id}
+            />
+          );
+        })}
       </main>
     );
   }

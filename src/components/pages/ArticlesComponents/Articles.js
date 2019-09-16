@@ -23,21 +23,20 @@ class Articles extends Component {
     const { topic } = this.props;
 
     return (
-      <main className="articlesContainer">
+      <main className="custom-container">
         <Sorter fetchAllArticles={this.fetchAllArticles} />
-        <section className="articlesList">
-          {topic && <h2 className="allTopicsHeader">Topics for {topic}</h2>}
-          {!topic && <h2 className="allTopicsHeader">All Articles</h2>}
-          {articles.map(article => {
-            return (
-              <ArticleCard
-                article={article}
-                username={this.props.username}
-                key={article.article_id}
-              />
-            );
-          })}
-        </section>
+
+        {topic && <h2 className="allTopicsHeader">Topics for {topic}</h2>}
+        {!topic && <h2 className="allTopicsHeader">All Articles</h2>}
+        {articles.map(article => {
+          return (
+            <ArticleCard
+              article={article}
+              username={this.props.username}
+              key={article.article_id}
+            />
+          );
+        })}
         <Router className="articleInfo">
           <SingleArticle path="/:article_id" />
         </Router>
@@ -46,7 +45,6 @@ class Articles extends Component {
   }
 
   componentDidMount() {
-    
     this.fetchAllArticles();
   }
 

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Router } from "@reach/router";
 import Homepage from "./components/pages/Homepage";
 import Header from "./components/pages/FunctionalComponents/Header";
@@ -9,7 +10,6 @@ import Users from "./components/pages/UsersComponents/Users";
 import SingleArticle from "./components/pages/ArticlesComponents/SingleArticle";
 import CommentPage from "./components/pages/CommentsComponents/CommentPage";
 import ErrorPage from "./components/pages/FunctionalComponents/ErrorPage";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
   state = {

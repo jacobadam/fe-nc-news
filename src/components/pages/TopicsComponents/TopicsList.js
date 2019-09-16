@@ -12,20 +12,17 @@ class TopicsList extends Component {
   };
 
   render() {
-
     const { isLoading, topics, error } = this.state;
 
     if (isLoading) return <LoadingPage />;
     if (error) return <ErrorPage error={error} />;
 
     return (
-      <main className="topicsContainer">
-        <section className="topicsList">
-          <h2 className="allTopicsHeader">All Topics</h2>
-          {topics.map(topic => {
-            return <TopicCard {...topic} key={topic.slug} />;
-          })}
-        </section>
+      <main className="custom-container">
+        <h2 className="allTopicsHeader">All Topics</h2>
+        {topics.map(topic => {
+          return <TopicCard {...topic} key={topic.slug} />;
+        })}
       </main>
     );
   }
