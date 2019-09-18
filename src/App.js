@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import { Router } from "@reach/router";
 import Homepage from "./components/pages/Homepage";
 import Header from "./components/pages/FunctionalComponents/Header";

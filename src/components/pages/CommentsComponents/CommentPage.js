@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import * as api from "../../../api";
 import CommentCard from "./CommentCard";
 import CommentPoster from "../FunctionalComponents/CommentPoster";
-import LoadingPage from "../FunctionalComponents/LoadingPage";
+import Spinner from "../FunctionalComponents/LoadingPage";
 import ErrorPage from "../FunctionalComponents/ErrorPage";
 
 class CommentPage extends Component {
@@ -15,7 +15,7 @@ class CommentPage extends Component {
   render() {
     const { isLoading, comments, error } = this.state;
     const { article_id } = this.props;
-    if (isLoading) return <LoadingPage />;
+    if (isLoading) return <Spinner />;
     if (error) return <ErrorPage error={error} />;
 
     return (

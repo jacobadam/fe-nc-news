@@ -6,7 +6,9 @@ const Header = props => {
   return (
     <div className="headerBar">
       <h3>
-        <span className="badge badge-secondary">NC NEWS</span>
+        <span className="ncnewsLogo">NC NEWS</span>
+        <br />
+        <br />
       </h3>
       {username ? (
         <h2 className="loggedIn">
@@ -15,36 +17,25 @@ const Header = props => {
       ) : (
         <h2 className="loggedIn">Not logged in :(</h2>
       )}
+      <br />
 
-      <Link to="/">
-        <button type="button" className="btn btn-outline-primary">
-          Home
-        </button>
+      <Link to="/" className="button1">
+        Home
       </Link>
-      <Link to="/articles">
-        <button type="button" className="btn btn-outline-secondary">
-          All Articles
-        </button>
+      <Link to="/articles" className="button1">
+        All Articles
       </Link>
-      <Link to="/topics">
-        <button type="button" className="btn btn-outline-success">
-          All Topics
-        </button>
+      <Link to="/topics" className="button1">
+        All Topics
       </Link>
-      <Link to="/topics/coding">
-        <button type="button" className="btn btn-outline-danger">
-          Coding
-        </button>
+      <Link to="/topics/coding" className="button1">
+        Coding
       </Link>
-      <Link to="/topics/football">
-        <button type="button" className="btn btn-outline-warning">
-          Football
-        </button>
+      <Link to="/topics/football" className="button1">
+        Football
       </Link>
-      <Link to="/topics/cooking">
-        <button type="button" className="btn btn-outline-info">
-          Cooking
-        </button>
+      <Link to="/topics/cooking" className="button1">
+        Cooking
       </Link>
     </div>
   );

@@ -1,11 +1,14 @@
 import React from "react";
+import MDSpinner from "react-md-spinner";
 
-const LoadingPage = () => {
+export const Spinner = () => {
   return (
-    <div className="spinner-border" role="status">
-      <span className="sr-only">Loading...</span>
+    <div className="spinner">
+      <div>
+        <MDSpinner />
+      </div>
     </div>
   );
 };
 
-export default LoadingPage;
+export default Spinner;

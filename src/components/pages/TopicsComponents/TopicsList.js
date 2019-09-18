@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import * as api from "../../../api";
 import TopicCard from "./TopicCard";
-import LoadingPage from "../FunctionalComponents/LoadingPage";
+import Spinner from "../FunctionalComponents/LoadingPage";
 import ErrorPage from "../FunctionalComponents/ErrorPage";
 
 class TopicsList extends Component {
@@ -14,7 +14,7 @@ class TopicsList extends Component {
   render() {
     const { isLoading, topics, error } = this.state;
 
-    if (isLoading) return <LoadingPage />;
+    if (isLoading) return <Spinner />;
     if (error) return <ErrorPage error={error} />;
 
     return (

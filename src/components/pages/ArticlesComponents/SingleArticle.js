@@ -4,7 +4,7 @@ import ErrorPage from "../FunctionalComponents/ErrorPage";
 import { Link } from "@reach/router";
 import VotesUpdater from "../FunctionalComponents/VotesUpdater";
 import CommentPage from "../CommentsComponents/CommentPage";
-import LoadingPage from "../FunctionalComponents/LoadingPage";
+import Spinner from "../FunctionalComponents/LoadingPage";
 
 class SingleArticle extends Component {
   state = {
@@ -15,7 +15,7 @@ class SingleArticle extends Component {
 
   render() {
     const { isLoading, article, error } = this.state;
-    if (isLoading) return <LoadingPage />;
+    if (isLoading) return <Spinner />;
     if (error) return <ErrorPage error={error} />;
 
     const {

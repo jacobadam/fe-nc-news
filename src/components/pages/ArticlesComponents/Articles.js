@@ -4,7 +4,7 @@ import ArticleCard from "./ArticleCard";
 import { Router } from "@reach/router";
 import SingleArticle from "./SingleArticle";
 import Sorter from "../FunctionalComponents/Sorter";
-import LoadingPage from "../FunctionalComponents/LoadingPage";
+import Spinner from "../FunctionalComponents/LoadingPage";
 import ErrorPage from "../FunctionalComponents/ErrorPage";
 
 class Articles extends Component {
@@ -17,7 +17,7 @@ class Articles extends Component {
   render() {
     const { isLoading, articles, error } = this.state;
 
-    if (isLoading) return <LoadingPage />;
+    if (isLoading) return <Spinner />;
     if (error) return <ErrorPage error={error} />;
 
     const { topic } = this.props;
