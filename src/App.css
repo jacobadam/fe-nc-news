@@ -29,8 +29,7 @@ h1 {
   margin-right: auto;
   color: black;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-  font-family: "Montserrat",
-    sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .homepageHeader {
@@ -41,15 +40,13 @@ h1 {
   padding: 2%;
   color: salmon;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-  font-family: "Montserrat",
-    sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Articles */
 
 .articleHeader {
-  font-family: "Montserrat",
-    sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .singleArticleText {
@@ -66,7 +63,7 @@ h1 {
 }
 
 .voteScore {
-  color: red;
+  color: whitesmoke;
 }
 
 .singleArticle {
@@ -79,15 +76,21 @@ h1 {
 }
 
 .homepageHeader {
-  font-family: "Montserrat",
-    sans-serif;
-  background-color: floralwhite;
+  font-family: "Montserrat", sans-serif;
+  background-image: url("https://www.pixel4k.com/wp-content/uploads/2018/11/dark-black-simple-background-4k_1541970824.jpg");
+  justify-content: center;
+  /* margin: auto; */
+  width: auto;
 }
 
 .sortContainer {
-  background-color: floralwhite;
+  background-image: url("https://www.pixel4k.com/wp-content/uploads/2018/11/dark-black-simple-background-4k_1541970824.jpg");
+  justify-content: center;
+  margin: auto;
+  width: 320px;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
 }
-
 
 .loggedIn {
   position: relative;
@@ -97,8 +100,7 @@ h1 {
   margin-right: auto;
   color: salmon;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-  font-family: "Montserrat",
-    sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* card css */
@@ -106,16 +108,24 @@ h1 {
 .custom-container {
   min-height: 80vh;
   width: 100%;
-  background: floralwhite;
+  background-image: url("https://img.freepik.com/free-photo/dark-grunge-texture_1048-4055.jpg?size=626&ext=jpg");
 }
 
 .custom-card {
   border-width: 100%;
   font-size: 15px;
-  max-width: 80%;
+  max-width: 70%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 20px auto;
   min-height: 15vh;
+  border-radius: 16px;
+  background-image: url("https://www.pixel4k.com/wp-content/uploads/2018/11/dark-black-simple-background-4k_1541970824.jpg");
+  color: aliceblue;
+  text-decoration: none;
+}
+
+a:visited {
+  color: whitesmoke;
 }
 
 /* topics css */
@@ -124,11 +134,14 @@ h1 {
   min-height: 100%;
   height: 100%;
   color: salmon;
-  background-color: floralwhite;
+  background-image: url("https://www.pixel4k.com/wp-content/uploads/2018/11/dark-black-simple-background-4k_1541970824.jpg");
   margin-top: auto;
   margin-bottom: auto;
   margin-left: auto;
   margin-right: auto;
+  width: 320px;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
 }
 
 .topicsContainer {

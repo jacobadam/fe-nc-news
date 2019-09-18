@@ -21,7 +21,7 @@ const Header = props => {
       </Link>
       <Link to="/articles">
         <button type="button" className="btn btn-outline-secondary">
-          Articles
+          All Articles
         </button>
       </Link>
       <Link to="/topics">
