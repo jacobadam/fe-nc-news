@@ -9,7 +9,9 @@ const Header = props => {
         <span className="badge badge-secondary">NC NEWS</span>
       </h3>
       {username ? (
-        <h2 className="loggedIn">Logged in as {username}</h2>
+        <h2 className="loggedIn">
+          Logged in as <Link to={`/users/${username}`}> {username} </Link>
+        </h2>
       ) : (
         <h2 className="loggedIn">Not logged in :(</h2>
       )}

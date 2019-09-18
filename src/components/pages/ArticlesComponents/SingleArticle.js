@@ -30,11 +30,12 @@ class SingleArticle extends Component {
     } = article;
 
     return (
+      <>
       <div className="singleArticle">
         <Link to={`/topics/${topic}`}>
           <p>{topic}</p>
         </Link>
-        <h2 className="singleArticleText">{title}</h2>
+        <h2 className="singleArticleTextTitle">{title}</h2>
         <Link to={`/users/${author}`}>
           <p>{author}</p>
         </Link>
@@ -56,6 +57,7 @@ class SingleArticle extends Component {
           author={author}
         />
       </div>
+      </>
     );
   }
 

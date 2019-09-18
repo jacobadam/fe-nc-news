@@ -17,7 +17,7 @@ const CommentCard = props => {
   return (
     <div className="custom-card" key={article_id}>
       <Link to={`/users/${author}`}>
-        <h2 className="singleArticleTextCommentAuthor">{author}</h2>
+      <h2 className="singleArticleTextCommentAuthor">{author}</h2>
       </Link>
       <h2 className="singleArticleTextComment">
         Created: {new Date(created_at).toLocaleString()}

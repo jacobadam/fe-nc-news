@@ -50,11 +50,15 @@ h1 {
 }
 
 .singleArticleText {
-  color: black;
+  color: whitesmoke;
+}
+
+.singleArticleTextTitle {
+  color: salmon;
 }
 
 .singleArticleTextComment {
-  color: black;
+  color: whitesmoke;
   font-size: medium;
 }
 
@@ -68,7 +72,7 @@ h1 {
 
 .singleArticle {
   color: salmon;
-  background-color: floralwhite;
+  background-image: url("https://www.pixel4k.com/wp-content/uploads/2018/11/dark-black-simple-background-4k_1541970824.jpg");
   margin-top: auto;
   margin-bottom: auto;
   margin-left: auto;
@@ -83,6 +87,24 @@ h1 {
   width: auto;
 }
 
+.loggedIn {
+  position: relative;
+  padding: 5% 0 5%;
+  max-width: 240px;
+  max-height: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  color: salmon;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  box-shadow: 0 4px 8px 0 salmon;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
 .sortContainer {
   background-image: url("https://www.pixel4k.com/wp-content/uploads/2018/11/dark-black-simple-background-4k_1541970824.jpg");
   justify-content: center;
@@ -90,17 +112,8 @@ h1 {
   width: 320px;
   border-top-right-radius: 16px;
   border-top-left-radius: 16px;
-}
-
-.loggedIn {
-  position: relative;
-  padding: 5% 0 5%;
-  max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
-  color: salmon;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-  font-family: "Montserrat", sans-serif;
+  max-width: 320px;
+  
 }
 
 /* card css */
@@ -115,7 +128,7 @@ h1 {
   border-width: 100%;
   font-size: 15px;
   max-width: 70%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 salmon;
   margin: 20px auto;
   min-height: 15vh;
   border-radius: 16px;
@@ -125,7 +138,7 @@ h1 {
 }
 
 a:visited {
-  color: whitesmoke;
+  color: salmon;
 }
 
 /* topics css */
@@ -142,6 +155,22 @@ a:visited {
   width: 320px;
   border-bottom-right-radius: 16px;
   border-bottom-left-radius: 16px;
+}
+
+.allTopicsListHeader {
+   min-height: 100%;
+   height: 100%;
+   color: salmon;
+   background-image: url("https://www.pixel4k.com/wp-content/uploads/2018/11/dark-black-simple-background-4k_1541970824.jpg");
+   margin-top: auto;
+   margin-bottom: auto;
+   margin-left: auto;
+   margin-right: auto;
+   width: 320px;
+   border-bottom-right-radius: 16px;
+   border-bottom-left-radius: 16px;
+   border-top-left-radius: 16px;
+   border-top-right-radius: 16px;
 }
 
 .topicsContainer {
@@ -191,16 +220,21 @@ main {
 }
 
 .commentPoster {
-  background-color: floralwhite;
+  background-image: url("https://www.pixel4k.com/wp-content/uploads/2018/11/dark-black-simple-background-4k_1541970824.jpg");
   margin-top: auto;
   margin-bottom: auto;
   margin-left: auto;
   margin-right: auto;
+  width: 420px;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 .userCard {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  max-width: 200px;
   margin: auto;
   text-align: center;
   background-color: black;
@@ -210,6 +244,8 @@ main {
 .userHeader {
   color: salmon;
   font-size: 200%;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .userContainer {

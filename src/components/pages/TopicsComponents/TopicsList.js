@@ -19,7 +19,7 @@ class TopicsList extends Component {
 
     return (
       <main className="custom-container">
-        <h2 className="allTopicsHeader">All Topics</h2>
+        <h2 className="allTopicsListHeader">All Topics</h2>
         {topics.map(topic => {
           return <TopicCard {...topic} key={topic.slug} />;
         })}
