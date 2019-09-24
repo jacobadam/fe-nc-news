@@ -4,9 +4,12 @@ const UsernameCard = props => {
  const { username, avatar_url, name } = props;
   return (
     <div className="userCard">
-      <h1 className="userName">{username}</h1>
+      <br/>
+      <p className="userName">{username}</p>
+      <br/>
       <img src={avatar_url} alt={username} />
-      <h3 className="userName"> Name: {name}</h3>
+      <p className="userName"> Name: {name}</p>
+      <br/>
     </div>
   );
 }

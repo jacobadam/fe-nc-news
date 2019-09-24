@@ -33,7 +33,7 @@ class SingleArticle extends Component {
       <>
       <div className="singleArticle">
         <Link to={`/topics/${topic}`}>
-          <p>{topic}</p>
+          <p className="topicPlaceholderText">{topic}</p>
         </Link>
         <h2 className="singleArticleTextTitle">{title}</h2>
         <Link to={`/users/${author}`}>

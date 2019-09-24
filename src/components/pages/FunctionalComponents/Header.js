@@ -17,7 +17,6 @@ const Header = props => {
       ) : (
         <h2 className="loggedIn">Not logged in :(</h2>
       )}
-      <br />
 
       <Link to="/" className="button1">
         Home
