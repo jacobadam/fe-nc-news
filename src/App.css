@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   min-height: 100%;
+  min-width: 100%;
 }
 
 /* NAV BAR */
@@ -17,22 +18,11 @@
   padding: 10px 16px;
   transition: 0.2s;
   top: 0;
-  width: 100%;
+  max-width: 100%;
   z-index: 200;
 }
 
 .ncnewsLogo {
-  position: relative;
-  padding: 10% 0 5%;
-  max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
-  color: salmon;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-  font-family: "Montserrat", sans-serif;
-}
-
-h1 {
   position: relative;
   padding: 10% 0 5%;
   max-width: 640px;
@@ -86,8 +76,9 @@ h1 {
 }
 
 .root {
-  width: 100%;
+  min-width: 100%;
 }
+
 .singleArticle {
   color: salmon;
   background-image: url("https://www.pixel4k.com/wp-content/uploads/2018/11/dark-black-simple-background-4k_1541970824.jpg");
@@ -350,6 +341,7 @@ a.button1:hover {
   /* Green */
   color: white;
 }
+
 .button3 {
   -webkit-transition-duration: 0.4s;
   /* Safari */
